@@ -1,0 +1,206 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+header {
+  padding-left: 10px;
+  background-color: rgb(20, 20, 173);
+  font-size: 33px;
+  color: aqua;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  grid-area: header;
+}
+
+.reg {
+  font-family: "Raleway-Medium";
+  text-decoration: none;
+  margin-right: 30px;
+  width: 150px;
+  height: 40px;
+  font-size: 20px;
+  background-color: rgb(25, 150, 25);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 0px 5px 0px rgb(3, 110, 3);
+  outline: none;
+}
+.reg:hover {
+  text-decoration: none;
+  margin-right: 30px;
+  width: 150px;
+  height: 40px;
+  font-size: 20px;
+  background-color: rgb(23, 143, 23);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 0px 5px 0px rgb(3, 107, 3);
+  outline: none;
+  transition: 0.2s;
+}
+.reg:active {
+  transform: translateY(+2.5px);
+  box-shadow: 0px 3px 0px rgb(3, 107, 3);
+}
+
+footer {
+  color: white;
+  background-color: rgb(20, 20, 173);
+  grid-area: footer;
+  display: flex;
+  justify-content: center;
+}
+main {
+  grid-area: main;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background-color: rgb(243, 229, 229);
+  display: grid;
+  row-gap: 50px;
+  justify-content: center;
+}
+.wrapper {
+  grid-template-rows: 75px 1fr 55px;
+  display: grid;
+  grid-template-areas:
+    "header"
+    "main"
+    "footer";
+  height: 100vh;
+}
+
+.logo {
+  margin-left: 5px;
+  padding-top: 5px;
+  width: 60px;
+  height: 60px;
+}
+
+.divlogo {
+  display: flex;
+  align-items: center;
+}
+.spanlogo {
+  font-family: "Andika";
+  margin-left: 5px;
+  font-size: 50px;
+  padding-bottom: 6px;
+}
+.objects {
+  -webkit-transition: All 0.3s ease;
+
+  -moz-transition: All 0.3s ease;
+
+  -o-transition: All 0.3s ease;
+
+  -ms-transition: All 0.3s ease;
+
+  transition: All 0.3s ease;
+  font-family: "Raleway-Medium";
+  width: 180px;
+  height: 40px;
+  font-size: 23px;
+  background-color: rgb(20, 20, 173);
+  color: white;
+  border: 2px solid white;
+  border-radius: 35px;
+  cursor: pointer;
+}
+.objects:hover {
+  text-decoration: none;
+  width: 195px;
+  height: 42px;
+  font-size: 21px;
+  background-color: rgb(23, 23, 201);
+  color: white;
+  border: 2px solid white;
+  border-radius: 35px;
+}
+.stat {
+  width: 200px;
+  height: 60px;
+  border-radius: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.testwrap {
+  border-radius: 7px;
+  box-shadow: 5px 5px 5px rgb(185, 187, 185);
+  display: grid;
+  border: green solid 4px;
+  background-color: rgb(243, 229, 229);
+  height: 120px;
+  width: 900px;
+  padding: 7px;
+  font-family: "Raleway-Medium";
+  grid-template-areas:
+    "up "
+    "down ";
+}
+
+.work {
+  justify-self: center;
+  font-weight: lighter;
+  font-size: 19px;
+  grid-area: up;
+}
+.count {
+  font-size: 17px;
+  align-self: self-end;
+  margin-left: 5px;
+}
+
+.teststart:hover {
+  box-shadow: 0 0 40px 40px rgb(25, 150, 25) inset;
+  color: rgb(243, 229, 229);
+  cursor: pointer;
+}
+.teststart {
+  margin-right: 5px;
+  -webkit-transition: box-shadow 300ms ease-in-out, color 300ms ease-in-out;
+  transition: box-shadow 300ms ease-in-out, color 300ms ease-in-out;
+  width: 120px;
+  height: 35px;
+  border-radius: 6px;
+  font-size: 15px;
+  color: rgb(25, 150, 25);
+  border: 2px solid rgb(25, 150, 25);
+  background-color: rgb(243, 229, 229);
+  justify-self: end;
+  align-self: self-end;
+}
+.end {
+  grid-area: down;
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+
+@font-face {
+  font-family: "Andika";
+  font-style: normal;
+
+  src: local("Andika-Regular"),
+    url("../fonts/Andika-Regular.woff2") format("woff2"),
+    url("../fonts/Andika-Regular.woff2") format("woff"),
+    url("../fonts/Andika-Regular.woff2") format("truetype");
+}
+
+@font-face {
+  font-family: "Raleway-Medium";
+  font-style: normal;
+  font-weight: 400;
+
+  src: local("Raleway-Regular"),
+    url("../fonts/Raleway-Medium.woff2") format("woff2"),
+    url("../fonts/Raleway-Medium.woff") format("woff"),
+    url("../fonts/Raleway-Medium.ttf") format("truetype");
+}

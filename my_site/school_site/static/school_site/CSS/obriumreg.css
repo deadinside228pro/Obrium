@@ -1,0 +1,108 @@
+{% load static %}
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+.background {
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  background-image: url('../images/5556661.jpg');
+}
+.wrapper {
+  box-shadow: 0 0 5px 3px rgb(53, 52, 52);
+  display: grid;
+  grid-template-rows: 1fr 2fr 1fr;
+  grid-template-areas:
+    "logo"
+    "form"
+    "button";
+  border-radius: 20px;
+  height: 600px;
+  width: 450px;
+  background-color: white;
+  justify-items: center;
+}
+.color {
+  font-family: "Andika";
+  font-weight: bold;
+  font-size: larger;
+  color: black;
+}
+.mar {
+  margin: 5px;
+  border-radius: 5px;
+  width: 180px;
+  height: 25px;
+  border-style: solid;
+  border-color: black;
+}
+#login {
+  margin-left: 16px;
+}
+#specid {
+  margin-left: 7px;
+}
+
+.button:hover {
+  box-shadow: 0 0 5px 3px rgb(187, 182, 182);
+  margin-top: 20px;
+  border-radius: 17px;
+  background-color: rgb(20, 20, 173);
+  width: 140px;
+  height: 45px;
+  grid-area: button;
+  color: white;
+  font-weight: 700;
+  font-size: medium;
+}
+.button {
+  box-shadow: 0 0 5px 3px rgb(187, 182, 182);
+  margin-top: 20px;
+  border-radius: 17px;
+  background-color: rgb(16, 16, 145);
+  width: 140px;
+  height: 45px;
+  grid-area: button;
+  color: white;
+  font-weight: 700;
+  font-size: medium;
+}
+
+.logo {
+  margin-top: 75px;
+  height: 150px;
+  width: 150px;
+}
+.logwrap {
+  grid-area: logo;
+}
+.form {
+  grid-area: form;
+  align-self: center;
+  justify-self: center;
+}
+
+@font-face {
+  font-family: "Andika";
+  font-style: normal;
+  font-weight: 400;
+
+  src:
+    url("../fonts/Andika-Regular.woff2") format("woff2"),
+    url("../fonts/Andika-Regular.woff") format("woff"),
+    url("../fonts/Andika-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Raleway-Medium";
+  font-style: normal;
+  font-weight: 400;
+
+  src:
+    url("../fonts/Raleway-Medium.woff2") format("woff2"),
+    url("../fonts/Raleway-Medium.woff") format("woff"),
+    url("../fonts/Raleway-Medium.ttf") format("truetype");
+}
