@@ -10,6 +10,26 @@
     <title>profile</title>
 </head>
 <body>
+    <h1>
         <a href="{% url 'main' %}" class="prof_a">into main</a>
+    </h1>
+    <h2>USER</h2>
+    <div>
+        <span>NAME: {{info.name}}</span><br>
+        <span>SURNAME: {{info.surname}}</span><br>
+        <span>CLASS: {{info.stage}}</span>
+    </div>
+    <h2>WORKS</h2>
+    <div>
+        <ul>
+        {% for i in info.works %}
+            <li>
+                {{i}}
+            </li>
+        {% endfor %}
+        </ul>
+    </div>
+
+
 </body>
 </html>

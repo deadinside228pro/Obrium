@@ -18,16 +18,13 @@
           /></a>
           <span class="spanlogo">Obrium</span>
         </div>
+        {% for i in subjects %}
         <div class="stat">
-          <form action="{% url 'Математика' %}">
-            <button class="objects">математика</button>
+          <form action="{% url i %}">
+            <button class="objects">{{i}}</button>
           </form>
         </div>
-        <div class="stat">
-          <form action="{% url 'Русский язык' %}">
-            <button class="objects">русский язык</button>
-          </form>
-        </div>
+        {% endfor %}
         <form action="{% url 'profile' %}">
           <button class="reg">профиль</button>
         </form>
@@ -68,6 +65,42 @@
             <button class="teststart">начать работу</button>
           </div>
         </div>
+        {% if works != bbe %}
+        {% for i in works %}
+        <div class="testwrap">
+          <span class="work"> название работы:</span><br>
+          <span class="work"> тема работы:</span>
+          <div class="end">
+            <span class="count">bebebe</span>
+            <button class="teststart">начать работу</button>
+          </div>
+        </div>
+        {% endfor %}
+        {% else %}
+        <di>РАБОТ НЕТ</di>
+        {% endif %}
+<!--   бред полнейший снизу     -->
+        {% if done_works == bbe %}
+        <div>{{bbe}}</div>
+        <div>{{done_works}}</div>
+            {% for i in done_works %}
+             <div class="testwrap">
+          <span class="work"> название работы: {{i.name}}</span><br>
+          <span class="work"> тема работы: {{i.theme}}</span>
+          <div class="end">
+            <span class="count">bb</span>
+            <button class="teststart">начать работу</button>
+          </div>
+        </div>
+        {% endfor %}
+        {% else %}
+        <h1>выполенных работ нет</h1>
+        {% endif %}
+        {% for i in Works %}
+        <div>
+          <span>{{i.name}}: {{i.theme}}</span>
+        </div>
+        {% endfor %}
       </main>
       <footer>
         <div></div>

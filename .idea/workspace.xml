@@ -4,7 +4,41 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fee80c0c-0755-444a-85ba-2a05fb37738d" name="Changes" comment="" />
+    <list default="true" id="fee80c0c-0755-444a-85ba-2a05fb37738d" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bebe.py" beforeDir="false" afterPath="$PROJECT_DIR$/bebe.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my_site/my_site/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/my_site/my_site/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my_site/my_site/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/my_site/my_site/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my_site/school_site/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/my_site/school_site/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my_site/school_site/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/my_site/school_site/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my_site/school_site/templates/school_site/HTML/main.html" beforeDir="false" afterPath="$PROJECT_DIR$/my_site/school_site/templates/school_site/HTML/main.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my_site/school_site/templates/school_site/HTML/profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/my_site/school_site/templates/school_site/HTML/profile.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my_site/school_site/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/my_site/school_site/tests.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my_site/school_site/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/my_site/school_site/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my_site/tests/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/my_site/teacher/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my_site/tests/admin.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my_site/tests/apps.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my_site/tests/migrations/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/my_site/teacher/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my_site/tests/models.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my_site/tests/templates/tests/alg_test.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my_site/tests/templates/tests/all_tests.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my_site/tests/templates/tests/biolog_test.html" beforeDir="false" afterPath="$PROJECT_DIR$/my_site/teacher/templates/teacher/teacher_main.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my_site/tests/templates/tests/chem_test.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my_site/tests/templates/tests/eng_test.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my_site/tests/templates/tests/fiz_test.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my_site/tests/templates/tests/geog_test.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my_site/tests/templates/tests/geom_test.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my_site/tests/templates/tests/hist_test.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my_site/tests/templates/tests/literature_test.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my_site/tests/templates/tests/math_test.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my_site/tests/templates/tests/rus_test.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my_site/tests/templates/tests/soc_test.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my_site/tests/tests.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my_site/tests/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/my_site/works/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my_site/tests/views.py" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -13,10 +47,13 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Python Script" />
         <option value="HTML File" />
+        <option value="Python Script" />
       </list>
     </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -31,6 +68,7 @@
     &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;last_opened_file_path&quot;: &quot;C:/Users/esken/OneDrive/Рабочий стол/new_site/my_site/school_site/templates/school_site/HTML&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;
   }
@@ -41,11 +79,11 @@
       <recent name="C:\Users\esken\OneDrive\Рабочий стол\new_site\my_site\tests\templates\tests" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\esken\OneDrive\Рабочий стол\new_site\my_site\tests" />
+      <recent name="C:\Users\esken\OneDrive\Рабочий стол\new_site\my_site\teacher" />
       <recent name="C:\Users\esken\OneDrive\Рабочий стол\new_site\my_site\school_site\static\school_site\fonts" />
       <recent name="C:\Users\esken\OneDrive\Рабочий стол\new_site\my_site\school_site\static\school_site\images" />
       <recent name="C:\Users\esken\OneDrive\Рабочий стол\new_site\my_site\school_site\static\school_site" />
-      <recent name="C:\Users\esken\OneDrive\Рабочий стол\new_site\my_site\school_site\static\school_site\CSS" />
-      <recent name="C:\Users\esken\OneDrive\Рабочий стол\new_site\my_site\school_site\templates\school_site\HTML" />
     </key>
   </component>
   <component name="RunManager">
