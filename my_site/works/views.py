@@ -1,4 +1,8 @@
 from django.shortcuts import render
 
+
 def tests(request):
-    return render(request, 'works/all_tests.html')
+    return render(request, 'works/HTML/all_tests.html')
+
+
+

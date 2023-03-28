@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{% static 'school_site/CSS/main.css' %}" />
+    <title>Obrium</title>
+    <link rel="icon" type="image/ico" sizes="32x32" href="{% static 'school_site/images/ObrazMinLogo.ico' %}" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <div class="divlogo">
+          <a href="{% url 'reg' %}"
+            ><img src="{% static 'school_site/images/ObrazMinLogo.ico' %}" alt="logo" class="logo"
+          /></a>
+          <span class="spanlogo">Obrium</span>
+        </div>
+        {% for i in subjects %}
+        <div class="stat">
+          <form action="{% url i %}">
+            <button class="objects">{{i}}</button>
+          </form>
+        </div>
+        {% endfor %}
+        <form action="{% url 'profile' %}">
+          <button class="reg">профиль</button>
+        </form>
+      </header>
+      <main>
+        <div class="testwrap">
+          <span class="work">{{work.name}}</span>
+          <div class="end">
+            <span class="count">{{work.theme}}</span>
+            <span class="count">количество заданий: 15</span>
+            <button class="teststart" onclick="document.location='../test/math'">начать работу</button>
+          </div>
+        </div>
+      </main>
+      <footer>
+        <div></div>
+      </footer>
+    </div>
+  </body>
+</html>

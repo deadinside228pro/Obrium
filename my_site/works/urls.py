@@ -17,3 +17,7 @@ urlpatterns = [
     path('geogr/', views.tests, name='География'),
     path('bio/', views.tests, name='Биология'),
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+
+
+
+

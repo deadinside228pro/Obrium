@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{% if works != bbe %}
+        {% for i in works %}
+        <div class="testwrap">
+          <span class="work"> название работы:{{i.name}}</span><br>
+          <div class="end">
+            <span class="count">{{i.theme}}</span>
+            <button class="teststart">начать работу</button>
+          </div>
+        </div>
+        {% endfor %}
+        {% else %}
+        <div>РАБОТ НЕТ</div>
+        {% endif %}
+{{works}}
+</body>
+</html>
