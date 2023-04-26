@@ -10,11 +10,6 @@ class WorksModel(models.Model):
         return self.name + self.theme
 
 
-
-
-
-
-
 class ExcsModel(models.Model):
     theme = models.CharField(max_length=100)
     modul = models.CharField(max_length=100)

@@ -1,4 +1,3 @@
-{% load static %}
 * {
   margin: 0px;
   padding: 0px;
@@ -9,7 +8,7 @@
   height: 100vh;
   justify-content: center;
   align-items: center;
-  background-image: url('../images/5556661.jpg');
+  background-image: url(../images/5556661.jpg);
 }
 .wrapper {
   box-shadow: 0 0 5px 3px rgb(53, 52, 52);
@@ -33,6 +32,7 @@
 }
 .mar {
   margin: 5px;
+  padding-left: 6px;
   border-radius: 5px;
   width: 180px;
   height: 25px;
@@ -47,7 +47,7 @@
 }
 
 .button:hover {
-  box-shadow: 0 0 5px 3px rgb(187, 182, 182);
+  box-shadow: 3px 3px 5px rgb(185, 187, 185);
   margin-top: 20px;
   border-radius: 17px;
   background-color: rgb(20, 20, 173);
@@ -55,20 +55,23 @@
   height: 45px;
   grid-area: button;
   color: white;
-  font-weight: 700;
-  font-size: medium;
+  font-size: 21px;
 }
 .button {
-  box-shadow: 0 0 5px 3px rgb(187, 182, 182);
+  box-shadow: 3px 3px 5px rgb(185, 187, 185);
   margin-top: 20px;
+  border: solid black 3px;
   border-radius: 17px;
   background-color: rgb(16, 16, 145);
   width: 140px;
   height: 45px;
   grid-area: button;
   color: white;
-  font-weight: 700;
-  font-size: medium;
+  font-size: 21px;
+}
+
+#submit:disabled {
+  background-color: rgb(184, 174, 174);
 }
 
 .logo {
@@ -90,10 +93,10 @@
   font-style: normal;
   font-weight: 400;
 
-  src:
+  src: local("Andika-Regular"),
     url("../fonts/Andika-Regular.woff2") format("woff2"),
     url("../fonts/Andika-Regular.woff") format("woff"),
-    url("../fonts/Andika-Regular.ttf") format("truetype");
+    url("../fonts/Andika-Regular.ttf") format("ttf");
 }
 
 @font-face {
@@ -101,8 +104,8 @@
   font-style: normal;
   font-weight: 400;
 
-  src:
+  src: local("Raleway-Regular"),
     url("../fonts/Raleway-Medium.woff2") format("woff2"),
     url("../fonts/Raleway-Medium.woff") format("woff"),
-    url("../fonts/Raleway-Medium.ttf") format("truetype");
+    url("../fonts/Raleway-Medium.ttf") format("ttf");
 }
