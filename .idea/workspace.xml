@@ -5,15 +5,35 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fee80c0c-0755-444a-85ba-2a05fb37738d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/my_site/school_site/templates/school_site/HTML/work_detail.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/Obrium.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/my_site/school_site/forms.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/my_site/school_site/static/school_site/CSS/obrium.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/my_site/school_site/static/school_site/JS/obrium.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/my_site/school_site/templates/school_site/HTML/acc.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/my_site/school_site/templates/school_site/HTML/obrium.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/my_site/student/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/my_site/student/admin.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/my_site/student/apps.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/my_site/student/migrations/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/my_site/student/models.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/my_site/student/tests.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/my_site/student/urls.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/my_site/student/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/new_site.iml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bebe.py" beforeDir="false" afterPath="$PROJECT_DIR$/bebe.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my_site/school_site/templates/school_site/HTML/main.html" beforeDir="false" afterPath="$PROJECT_DIR$/my_site/school_site/templates/school_site/HTML/main.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my_site/my_site/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/my_site/my_site/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my_site/school_site/static/school_site/CSS/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/my_site/school_site/static/school_site/CSS/old_css/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my_site/school_site/static/school_site/CSS/obriumreg.css" beforeDir="false" afterPath="$PROJECT_DIR$/my_site/school_site/static/school_site/CSS/obriumreg.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my_site/school_site/static/school_site/CSS/profile.css" beforeDir="false" afterPath="$PROJECT_DIR$/my_site/school_site/static/school_site/CSS/old_css/profile.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my_site/school_site/templates/school_site/HTML/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/my_site/school_site/templates/school_site/HTML/obriumreg.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my_site/school_site/templates/school_site/HTML/main.html" beforeDir="false" afterPath="$PROJECT_DIR$/my_site/school_site/templates/school_site/HTML/old_html/main.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my_site/school_site/templates/school_site/HTML/profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/my_site/school_site/templates/school_site/HTML/old_html/profile.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/my_site/school_site/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/my_site/school_site/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/my_site/school_site/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/my_site/school_site/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/my_site/works/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/my_site/works/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my_site/works/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/my_site/works/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my_site/works/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/my_site/works/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,8 +43,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Python Script" />
         <option value="HTML File" />
+        <option value="Python Script" />
       </list>
     </option>
   </component>
@@ -39,32 +59,34 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/esken/OneDrive/Рабочий стол/new_site/my_site/school_site/templates/school_site/HTML&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "last_opened_file_path": "C:/Users/esken/Desktop/Obrium/my_site/school_site/templates/school_site/HTML",
+    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\esken\Desktop\Obrium\my_site\school_site\templates\school_site\HTML" />
+      <recent name="C:\Users\esken\Desktop\Obrium\my_site\school_site\static\school_site\CSS" />
       <recent name="C:\Users\esken\OneDrive\Рабочий стол\new_site\my_site\school_site\templates\school_site\HTML" />
       <recent name="C:\Users\esken\OneDrive\Рабочий стол\new_site\my_site\tests\templates\tests" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\esken\OneDrive\Рабочий стол\new_site\my_site\works\templates\works" />
-      <recent name="C:\Users\esken\OneDrive\Рабочий стол\new_site\my_site\works\templates" />
-      <recent name="C:\Users\esken\OneDrive\Рабочий стол\new_site\my_site\tests" />
-      <recent name="C:\Users\esken\OneDrive\Рабочий стол\new_site\my_site\teacher" />
-      <recent name="C:\Users\esken\OneDrive\Рабочий стол\new_site\my_site\school_site\static\school_site\fonts" />
+      <recent name="C:\Users\esken\Desktop\Obrium\my_site\school_site\static\school_site\CSS\old_css" />
+      <recent name="C:\Users\esken\Desktop\Obrium\my_site\school_site\templates\school_site\HTML\old_html" />
+      <recent name="C:\Users\esken\Desktop\Obrium\my_site\school_site\static\school_site\CSS" />
+      <recent name="C:\Users\esken\Desktop\Obrium\my_site\school_site\templates\school_site\HTML" />
+      <recent name="C:\Users\esken\Desktop\Obrium\my_site\school_site\static\school_site\JS" />
     </key>
   </component>
   <component name="RunManager">
     <configuration name="main" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
-      <module name="new_site" />
+      <module name="Obrium" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>

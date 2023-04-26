@@ -1,42 +1,64 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 import requests
-from .models import *
+
+from django.conf import settings
+from .forms import RegForm
 from works.models import *
 from django.views.generic import DetailView
 
 
 
-def index(request):
-    return render(request, 'school_site/HTML/index.html', {'login': 'student_1', 'password': 'ertjjeigjirj'})
+def reg(request):
+    if request.method == 'POST':
+        form = RegForm(request.POST)
+        if form.is_valid():
+            if form.data.get('spec_id') == '':
+                student = requests.post("http://cyberes.admin-blog.ru/LNTest/API/Student/logIn.php",
+                    data={'username': f"{form.cleaned_data.get('login')}",
+                          'password': f"{form.cleaned_data.get('password')}"}).json()
+                print(student)
+                if student == 1337:
+                    form.errors['reg_error_student'] = 'неправильный логин или пароль'
+                    print(form.errors.get('reg_error_student'))
+                    return render(request, 'school_site/HTML/obriumreg.html', {'form': form})
+                else:
+                    reg_data = {'login': form.cleaned_data.get('login'), 'password': form.cleaned_data.get('password')}
+                    request.session[settings.STUDENT_SESSION_ID] = reg_data
+                    return redirect('/student')
+            else:
+                teacher = 'bebeb' # узнать
+    else:
+        form = RegForm()
+    return render(request, 'school_site/HTML/obriumreg.html', {'form': form})
 
 def main(request):
+    print(request.session.get('student')['login'])
+    login = request.session.get('student')['login']
+    password = request.session.get('student')['password'] # e10adc3949ba59abbe56e057f20f883e
     subject = requests.get("http://cyberes.admin-blog.ru/LNTest/API/getItemCodeByFullName.php").json()
-    works = requests.post("http://cyberes.admin-blog.ru/LNTest/API/Student/logIn.php",
-                    data={'username': "student_1", 'password': 'e10adc3949ba59abbe56e057f20f883e'}).json()
-    Works = WorksModel.objects.all()
-
-    gfe = works.get('works')
-    if gfe == Works:
-        forks = 'yes'
-    else:
-        forks = 'hhhh'
+    student = requests.post("http://cyberes.admin-blog.ru/LNTest/API/Student/logIn.php",
+                    data={'username': login, 'password': password}).json()
+    # Works = WorksModel.objects.all()
+    works = student.get('works')
+    # if gfe == Works:
+    #     forks = 'yes'
+    # else:
+    #     forks = 'hhhh'
     # for i,b in works.get('works').items():
     #     # print(i,b, len(b))
     #     for f in range(len(b)):
     #         work = WorksModel(i,b[f])
     #         work.save()
     subject_names = [*subject]
-    bbe = {}
 
     data = {
         'subjects': subject_names,
-        'done_works': works.get('CompletedWorks'),
-        'bbe': bbe,
-        'Works': Works,
-        'forks': forks,
-        'gfe': gfe,
+        'done_works': student.get('CompletedWorks'),
+        'student': student,
+        'forks': 'forks',
+        'works': works,
     }
-    return render(request, 'school_site/HTML/main.html', data)
+    return render(request, 'school_site/HTML/obrium.html', data)
 
 class WorksDetailView(DetailView):
     model = WorksModel
@@ -52,10 +74,11 @@ class WorksDetailView(DetailView):
 
 
 def profile(request):
-    user ={'info': requests.post("http://cyberes.admin-blog.ru/LNTest/API/Student/logIn.php",
-                    data={'username': "student_1", 'password': 'e10adc3949ba59abbe56e057f20f883e'}).json()
-           }
-    return render(request, 'school_site/HTML/profile.html', user)
+    login = request.session.get('student')['login']
+    password = request.session.get('student')['password']
+    student = {'student': requests.post("http://cyberes.admin-blog.ru/LNTest/API/Student/logIn.php",
+                    data={'username': login, 'password': password}).json()}
+    return render(request, 'school_site/HTML/acc.html', student)
 
 
 def testiruyu(request):

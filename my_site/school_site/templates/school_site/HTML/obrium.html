@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{% static 'school_site/CSS/obrium.css' %}" />
+    <title>Obrium</title>
+    <link rel="icon" type="image/ico" sizes="32x32" href="{% static 'school_site/images/ObrazMinLogo.ico' %}" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <div class="divlogo">
+          <a href="{% url 'reg' %}"
+            ><img src="{% static 'school_site/images/ObrazMinLogo.ico' %}" alt="logo" class="logo"
+          /></a>
+          <span class="spanlogo">Obrium</span>
+        </div>
+        <form action="{% url 'profile' %}">
+          <button class="reg">мой аккаунт</button>
+        </form>
+      </header>
+      <main>
+        <input type="radio" id="all" name="categories" value="all" checked />
+        <input type="radio" id="math" name="categories" value="math" />
+        <input type="radio" id="rus" name="categories" value="rus" />
+        <ol class="filters">
+          <li><label for="all">все</label></li>
+          <li><label for="math">математика</label></li>
+          <li><label for="rus">русский язык</label></li>
+        </ol>
+        <ol class="posts">
+          <li class="post" data-category="math">
+            <div class="testwrap">
+              <span class="work"> название работы</span>
+              <div class="end">
+                <span class="count">количество заданий: 15</span>
+
+                <a href="work.html" class="teststart">начать работу</a>
+              </div>
+            </div>
+          </li>
+          <li class="post" data-category="rus">
+            <div class="testwrap">
+              <span class="work"> название работы</span>
+              <div class="end">
+                <span class="count">количество заданий: 15</span>
+                <a href="work.html" class="teststart">начать работу</a>
+              </div>
+            </div>
+          </li>
+          <li class="post" data-category="rus">
+            <div class="testwrap">
+              <span class="work"> название работы</span>
+              <div class="end">
+                <span class="count">количество заданий: 15</span>
+                <a href="work.html" class="teststart">начать работу</a>
+              </div>
+            </div>
+          </li>
+          <li class="post" data-category="rus">
+            <div class="testwrap">
+              <span class="work"> название работы</span>
+              <div class="end">
+                <span class="count">количество заданий: 15</span>
+                <a href="work.html" class="teststart">начать работу</a>
+              </div>
+            </div>
+          </li>
+
+<!--          ----------------------------------------------               -->
+          {% if works %}
+            {% for category,names_list in works.items %}
+              {% for name in names_list %}
+                <li class="post" data-category="{{ category }}">
+                  <div class="testwrap">
+                    <span class="work">{{ name }}</span>
+                    <div class="end">
+                      <span class="count">количество заданий: 15</span>
+                      <a href="work.html" class="teststart">начать работу</a>
+                    </div>
+                  </div>
+                </li>
+              {% endfor %}
+            {% endfor %}
+          {% else %}
+            <li class="post" data-category="math">
+              <div class="testwrap">
+                <span class="work">НЕТ РАБОТ</span>
+              </div>
+            </li>
+          {% endif %}
+<!--          ---------------------------------------------------------------                -->
+
+          <li class="post" data-category="math">
+            <div class="testwrap">
+              <span class="work"> название работы</span>
+              <div class="end">
+                <span class="count">количество заданий: 15</span>
+                <a href="work.html" class="teststart">начать работу</a>
+              </div>
+            </div>
+          </li>
+          <li>{{ student }}</li><br>
+          <li>{{ works }}</li>
+          <li>{{ done_works }}</li>
+        </ol>
+      </main>
+      <footer>
+        <div></div>
+      </footer>
+    </div>
+  </body>
+</html>
