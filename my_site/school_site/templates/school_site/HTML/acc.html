@@ -1,0 +1,13 @@
+{% extends 'school_site/HTML/base_acc.html' %}
+
+{% block img_href %} {% url 'std_main' %} {% endblock %}
+{% block btn_href %} {% url 'std_main' %} {% endblock %}
+
+{% block name %}
+{{ student.surname }} {{ student.name }} {{ student.thirdname }}
+{% endblock %}
+
+{% block status_stage %}
+<div class="inf">Статус: <span>Ученик</span></div>
+<div class="inf">Класс: <span>{{ student.stage }}</span></div>
+{% endblock %}

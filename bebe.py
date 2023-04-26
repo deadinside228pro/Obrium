@@ -3,8 +3,9 @@ import requests
 
 sub = requests.post("http://cyberes.admin-blog.ru/LNTest/API/Student/logIn.php",
                     data={'username': "student_1", 'password': 'e10adc3949ba59abbe56e057f20f883e'}).json()
+print(sub)
 if sub == 1337:
-    print(sub)
+    print(sub, type(sub))
 else:
     for i,b in sub.get('works').items():
         # print(i,b, len(b))
@@ -21,3 +22,7 @@ else:
 #
 # for i in sub.keys():
 #     print(i)
+
+teac = requests.post("http://cyberes.admin-blog.ru/LNTest/API/Teacher/logInTeacher.php",
+                     data={"username": "teacher_1", "password": "123456"}).json()
+print(teac)

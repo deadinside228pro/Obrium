@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{% static 'school_site/CSS/obrium.css' %}" />
+    <title>Obrium</title>
+    <link rel="icon" type="image/ico" sizes="32x32" href="{% static 'school_site/images/ObrazMinLogo.ico' %}" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <div class="divlogo">
+          <a href="{% url 'reg' %}"
+            ><img src="{% static 'school_site/images/ObrazMinLogo.ico' %}" alt="logo" class="logo"
+          /></a>
+          <span class="spanlogo">Obrium</span>
+        </div>
+        <form action="{% url 'tch_profile' %}">
+          <button class="reg">мой аккаунт</button>
+        </form>
+      </header>
+      <main>
+          <div class="contpos">
+            <div class="cont">
+              <div id="otpr">Отправить задание</div>
+                <form>
+                  <div class="object">
+                    Предмет:
+                    <select>
+                      <option value="math" data-object="math">матемитика</option>
+                      <option value="rus" data-object="rus">русский язык</option>
+                    </select>
+                    <label for="module" class="mod">Модуль: </label>
+                    <input type="number" id="module" />
+                  </div>
+                  <div class="klas">
+                    Класс:
+                    <select class="selA">
+                      <option selected disabled>——</option>
+                      <option value="5.1" data-class="5.1">5.1</option>
+                      <option value="6.1" data-class="6.1">6.1</option>
+                    </select>
+                  </div>
+                  <div class="colon">
+                    <div class="students">
+                      Ученик:
+                      <select class="selB">
+                        <option value="s1" data-student="5.1">Вася Карыч</option>
+                        <option value="s1" data-student="5.1">Вася Карыч</option>
+                        <option value="s1" data-student="5.1">Вася Карыч</option>
+                        <option value="s2" data-student="6.1">Вася Карыч</option>
+                        <option value="s3" data-student="6.1">Алексей Раков</option>
+                      </select>
+                    </div>
+                    <button type="submit" class="sendwork">отправить задание</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+
+      </main>
+      <footer>
+        <div>
+          <form action="{% url 'tch_main' %}" method="post">
+            {% csrf_token %}
+            {{ form }}
+            <button type="submit">SEND</button>
+
+          </form>
+        </div>
+      </footer>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $(".selA").change(function () {
+          var selectedClass = $(this).children("option:selected").data("class");
+          $(".selB option").each(function () {
+            if ($(this).data("student") == selectedClass) {
+              $(this).show();
+            } else {
+              $(this).hide();
+            }
+          });
+        });
+      });
+    </script>
+  </body>
+</html>

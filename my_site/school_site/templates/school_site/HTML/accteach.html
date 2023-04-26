@@ -1,0 +1,13 @@
+{% extends 'school_site/HTML/base_acc.html' %}
+
+{% block img_href %} {% url 'tch_main' %}" {% endblock %}
+{% block btn_href %} {% url 'tch_main' %} {% endblock %}
+
+
+{% block name %}
+{{ teacher.surname }} {{ teacher.name }} {{ teacher.thirdname }}
+{% endblock %}
+
+{% block status_stage %}
+<div class="inf">Статус: Учитель</div>
+{% endblock %}

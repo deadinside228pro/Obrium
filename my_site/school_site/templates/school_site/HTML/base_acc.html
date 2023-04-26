@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{% static 'school_site/CSS/obrium.css' %}" />
+    <title>Профиль</title>
+    <link rel="icon" type="image/ico" sizes="32x32" href="{% static 'school_site/images/ObrazMinLogo.ico' %}" />
+  </head>
+<body>
+        <div class="wrapper">
+      <header>
+        <div class="divlogo">
+          <a href="{% block img_href %} {% endblock %}"
+            ><img src="{% static 'school_site/images/ObrazMinLogo.ico' %}" alt="logo" class="logo"
+          /></a>
+          <span class="spanlogo">Obrium</span>
+        </div>
+        <form action="{% block btn_href %} {% endblock %}">
+          <button class="reg">на главную</button>
+        </form>
+      </header>
+      <main>
+        <div class="ava">
+          <img class="ava" src="data:image/jpeg;base64,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"/>
+        </div>
+        <div>
+          <div class="inf">ФИО: <span>{% block name %} {% endblock %}</span></div>
+          {% block status_stage %}
+          {% endblock %}
+          <div class="inf">Учебное заведение: <span>ЦО Кудрово</span></div>
+        </div>
+      </main>
+      <footer>
+        <div></div>
+      </footer>
+    </div>
+</body>
+</html>

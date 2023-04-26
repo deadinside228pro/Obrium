@@ -1,18 +1,11 @@
-from django.forms import *
+import requests
+from django import forms
+from requests import *
 from works.models import *
 
-class WorksCreateForm(ModelForm):
-    class Meta:
-        model = WorksModel
-        fields = ['name', 'theme']
+subjects = requests.post("http://cyberes.admin-blog.ru/LNTest/API/getItemCodeByFullName.php").json()
 
-        widgets = {
-            "name": TextInput(attrs={
-                'class': 'form-control',
-                'placeholder': 'имя работы'
-            }),
-            "theme": TextInput(attrs={
-                'class': 'form-control',
-                'placeholder': 'тема работы'
-            })
-        }
+subjects = tuple(map(lambda x: (x[1], x[0]), subjects.items()))
+
+class WorksCreateForm(forms.Form):
+    subject = forms.ChoiceField(choices=subjects)

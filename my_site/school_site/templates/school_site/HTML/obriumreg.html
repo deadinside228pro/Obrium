@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{% static 'school_site/CSS/obriumreg.css' %}" />
+    <title>regpage</title>
+    <link rel="icon" type="image/ico" sizes="32x32" href="{% static 'school_site/images/ObrazMinLogo.ico' %}" />
+  </head>
+  <body>
+    <div class="background">
+      <div class="wrapper">
+        <div class="logowrap">
+          <a href="{% url 'reg' %}"
+            ><img src="{% static 'school_site/images/ObrazMinLogo.ico' %}" alt="logo" class="logo"
+          /></a>
+        </div>
+        <form class="form" method="post">
+<!--          <label for="login" class="color">Логин</label>-->
+<!--          <input-->
+<!--            oninput="checkParams()"-->
+<!--            type="text"-->
+<!--            id="login"-->
+<!--            name="login"-->
+<!--            autocomplete="on"-->
+<!--            required-->
+<!--            class="mar"-->
+<!--          />-->
+<!--          <br />-->
+<!--          <label for="password" class="color">Пароль</label>-->
+<!--          <input-->
+<!--            oninput="checkParams()"-->
+<!--            type="password"-->
+<!--            id="password"-->
+<!--            name="password"-->
+<!--            autocomplete="on"-->
+<!--            required-->
+<!--            class="mar"-->
+<!--          />-->
+<!--          <br />-->
+<!--          <label for="password" class="color">Спец id</label>-->
+<!--          <input-->
+<!--            placeholder="  для учителей"-->
+<!--            type="password"-->
+<!--            id="specid"-->
+<!--            autocomplete="on"-->
+<!--            class="mar"-->
+<!--          />-->
+<!--          <br />-->
+          {% csrf_token %}
+          {% for i in form %}
+          <label for="{{ i.id_for_label }}" class="color">{{ i.label }}</label>
+          {{ i }} <br>
+          {% endfor %}
+          {{ form.errors.reg_error }}
+          <center>
+            <button
+              type="submit"
+              id="submit"
+              class="button"
+              disabled
+            >
+              Войти
+            </button>
+          </center>
+        </form>
+      </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script>
+
+      function checkParams() {
+        var login = $.trim($("#login").val());
+        var password = $.trim($("#password").val());
+
+        if (login.length > 0 && password.length > 0) {
+          $("#submit").prop("disabled", false);
+        } else {
+          $("#submit").prop("disabled", true);
+        }
+      }
+    </script>
+  </body>
+</html>
